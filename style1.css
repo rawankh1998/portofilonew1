@@ -1,0 +1,672 @@
+* {
+    margin: 0;
+    top:0;
+}
+html {
+    font-size: 16px;
+    font-family: Arial;
+    
+}
+
+header {
+    padding: 5px;
+    border-bottom: 3px solid #e4eddb;
+    height: 3rem;
+    background: #e4eddb ;
+    position: sticky;
+    z-index: 999;
+   
+}
+.burger-wrapper {
+  cursor: pointer;
+  /*position: sticky;
+  top:0;*/
+}
+#meny {
+    background:#307672;
+    width: 20rem;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    transition-timing-function: cubic-bezier(10,2,3,1);
+    transform: translateX(20rem);
+    top: 0;
+    z-index: 0;
+    transition: 0.5s;
+}
+#menyAvPaa {
+    display: none;
+}
+
+#menyAvPaa:checked ~ #meny {
+    transform: translateX(0rem);
+}
+
+#burger {
+    position: absolute;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    right: 1rem;
+    top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#burger > div {
+    height: 2px;
+    background-color: #307672;
+    transition: 0.5s;
+    z-index: 999;
+    
+}
+
+#menyAvPaa:checked ~ #burger > div {
+  background-color: #e4eddb;
+}
+
+#menyAvPaa:checked ~ #burger > div:nth-child(1) {
+    transform: translateY(15px) rotate(45deg);
+}
+#menyAvPaa:checked ~ #burger > div:nth-child(2) {
+    opacity: 0;
+}
+#menyAvPaa:checked ~ #burger > div:nth-child(3) {
+    transform: translateY(-15px) rotate(-45deg);
+}
+
+#meny .box{
+    text-align: center;
+    line-height: 93px;
+    color:#1a3c40;
+    border: 2px solid white;
+}
+.box a{
+    text-decoration: none;
+    color: white;
+}
+.cv{
+    padding-top: 20px;
+}
+.cv a{
+    color:#307672;
+    padding: 10px;
+    margin: 50px;
+    text-decoration: none;
+    
+}
+a:hover{
+    opacity:0.3;
+}
+.row1{
+    height: 60vh;
+   background-color:gainsboro;
+  /* border-bottom: 105px solid white;
+   border-right: 105px solid white;
+   border-left: 105px solid white;*/
+   border-bottom: 2px solid #307672;
+
+
+}
+img{
+    margin-left: 140px;
+    height: 200px;
+    width: 200px;
+    margin-top: 50px;    
+    border:5px solid white;
+    box-shadow: 10px 10px 5px grey;
+   
+}
+.myimg:hover{
+ transform:scale(1.0005,1.06);
+
+
+}
+h1{
+   /* text-shadow: 2px 2px 5px #307672;*/
+    margin-top: -170px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+p{
+    /*text-shadow: 2px 2px 5px #307672;*/
+    font-size: 15px;
+    padding-top: 20px;
+    text-align: center;
+    color: white; 
+}
+
+.btn{
+    padding-top: 50px;
+    text-align: center;
+    position: relative;
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+    border:15px solid transparent;
+    background-color: #307672;
+    border-radius: 5px;
+    
+}
+.btn a:hover{
+    opacity: 0.9;
+}
+
+.fa {
+    padding: 15px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin-top:-250px;
+    border-radius: 50%;
+  }
+  .fa:hover {
+      opacity: 0.9;
+     
+  }
+  .soical{
+    
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+  }
+  .fa-instagram {
+    background: #307672;
+    color: white;
+   
+    /*align-items: center;*/
+   
+  }
+  .fa-pinterest {
+    background: #307672;
+    color: white;
+  }
+  .fa-facebook {
+    background: #307672;
+    color: white;
+  }
+  .fa-google {
+    background: #307672;
+    color: white;
+  }
+  .tooltip1 {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip1 .tooltiptext1 {
+    visibility: hidden;
+    width: 200px;
+    background-color:#e4eddb;
+    height: 20px;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+   bottom: 100%;
+    left: 50%;
+    margin-left: 155px;
+    margin-top: -65px;
+  }
+  
+  .tooltip1:hover .tooltiptext1 {
+    visibility: visible;
+  }
+  .tooltip2 {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip2 .tooltiptext2 {
+    visibility: hidden;
+    width: 200px;
+    background-color:#e4eddb;
+    height: 20px;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+   bottom: 100%;
+    left: 50%;
+    margin-left: -110px;
+    margin-top: -65px;
+  }
+  
+  .tooltip2:hover .tooltiptext2 {
+    visibility: visible;
+  }
+  .tooltip3 {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip3 .tooltiptext3 {
+    visibility: hidden;
+    width: 200px;
+    background-color:#e4eddb;
+    height: 20px;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+   bottom: 100%;
+    left: 50%;
+    margin-left: -110px;
+    margin-top: -65px;
+  }
+  
+  .tooltip3:hover .tooltiptext3 {
+    visibility: visible;
+  }
+  .tooltip4 {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip4 .tooltiptext4 {
+    visibility: hidden;
+    width: 200px;
+    background-color:#e4eddb;
+    height: 20px;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+   bottom: 100%;
+    left: 50%;
+    margin-left: -110px;
+    margin-top: -65px;
+  }
+  .tooltip4:hover .tooltiptext4 {
+    visibility: visible;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75vh;
+  }
+  
+  .card {
+    width: 900px;
+    height: 250px;
+    margin: 0px 10px;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    top:-60px;
+    left: 0px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+    transition: all 150ms ease-in-out;
+  }
+  .card:hover {
+     /* top: -3px;*/
+     /* left: -3px;*/
+    box-shadow: 3px 3px 15px 0px rgba(82, 82, 82, 0.85);
+  }
+ /* .card:active {
+      top: 2px;
+      left: 2px;
+      background-color: red;*/
+
+     .about-me h1{
+          text-align: left;
+          margin-top: 50px;
+          color: #307672;
+          margin-left: 10px;
+      }
+      
+     .card p{
+      color: black;
+      line-height: 40px;
+      margin-left: 10px;
+      text-align: left;
+      font-size: 20px;
+          
+      }
+      .education{
+          height: 90vh;
+      }
+
+    .education h1{
+     text-align:center;
+     margin-left: 200px;
+     margin-top:60px;
+     color: #307672;
+     /*margin-bottom: -50px;*/
+              
+     } 
+     h1:hover{
+         text-decoration: underline;
+     }
+
+     .card1 {
+        width: 900px;
+        height: 300px;
+       /* margin-top: 300px;*/
+        background-color: #307672;
+        cursor: pointer;
+        position: relative;
+      /*  top:-60px;*/
+        left:-150px;
+        border-radius: 20px;
+        box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+        transition: all 150ms ease-in-out;
+      }
+      .card1:hover {
+         /* top: -3px;*/
+         /* left: -3px;*/
+        box-shadow: 3px 3px 15px 0px rgba(82, 82, 82, 0.85);
+      }
+          
+     .card1 h3{
+              margin-left: 10px;
+              margin-top: 50px;
+              color: #1a3c40;
+     }
+          
+    .card1 p{
+              color: black;
+              line-height: 40px;
+             margin-left: 150px;
+             text-align: left;
+             font-size: 20px;
+             margin-top: -60px;
+              
+          }
+          .card2 {
+            width: 1000px;
+            height: 300px;
+           /* margin-top: 500px;*/
+            background-color: #e4eddb;
+            cursor: pointer;
+            position: relative;
+           /* top:150px;*/
+            left: -100px;
+            border-radius: 20px;
+            box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+            transition: all 150ms ease-in-out;
+          }
+          .card2:hover {
+             /* top: -3px;*/
+             /* left: -3px;*/
+            box-shadow: 3px 3px 15px 0px rgba(82, 82, 82, 0.85);
+          }
+          .card2 h3{
+            margin-left: 10px;
+            margin-top: 50px;
+            color: #1a3c40;
+        }
+        
+        .card2 p{
+            color: black;
+            line-height: 40px;
+           margin-left: 150px;
+           text-align: left;
+           font-size: 20px;
+           margin-top: -60px;
+            
+        }
+
+     
+    
+    .card3 {
+      width: 900px;
+      height: 300px;
+     /* margin-top: 500px;*/
+      background-color: white;
+      cursor: pointer;
+      position: relative;
+     /* top:400px;*/
+      left: -50px;
+      border-radius: 20px;
+      box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+      transition: all 150ms ease-in-out;
+    }
+    .card3:hover {
+       /* top: -3px;*/
+       /* left: -3px;*/
+      box-shadow: 3px 3px 15px 0px rgba(82, 82, 82, 0.85);
+    }
+    .card3 h3{
+      margin-left: 10px;
+      margin-top: 50px;
+      color: #1a3c40;
+  }
+  
+  .card3 p{
+      color: black;
+      line-height: 40px;
+     margin-left: 150px;
+     text-align: left;
+     font-size: 20px;
+     margin-top: -60px;
+      
+  }
+  .professional-skills{
+      height: 50vh;
+  }
+  .professional-skills h1{
+    text-align:center;
+    margin-left: -555px;
+    margin-top:50px;
+    color: #307672;
+  }
+  .progress {
+    background: rgba(255,255,255,0.1);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    padding: 0 5px;
+    display: flex;
+    height: 40px;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    
+    display: flex;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+  .css{
+      color: #307672;
+  }
+
+.progress1 {
+    margin-top: -200px;
+    margin-left: 200px;
+     background: rgba(255,255,255,0.1);
+     justify-content: flex-start;
+     border-radius: 100px;
+     align-items: center;
+     position: relative;
+     padding: 0 5px;
+     display: flex;
+     height: 40px;
+     width: 500px;
+     border: 2px solid #307672;
+   }
+   
+   .progress-value1 {
+   
+     animation: load1 5s normal forwards;
+     box-shadow: 0 10px 40px -10px #1a3c40;
+     border-radius: 100px;
+     background:#e4eddb;
+     height: 30px;
+     width: 0;
+   }
+   
+   @keyframes load1 {
+     0% { width: 0; }
+     100% { width: 68%; }
+   }
+   
+.html{
+    color:#307672;
+}
+   
+.progress2 {
+    margin-top: 100px;
+    margin-left: 200px;
+     background: rgba(255,255,255,0.1);
+     justify-content: flex-start;
+     border-radius: 100px;
+     align-items: center;
+     position: relative;
+     padding: 0 5px;
+     display: flex;
+     height: 40px;
+     width: 500px;
+     border: 2px solid #307672;
+   }
+   
+   .progress-value2 {
+     animation: load 5s normal forwards;
+     box-shadow: 0 10px 40px -10px #1a3c40;
+     border-radius: 100px;
+     background:#e4eddb;
+     height: 30px;
+     width: 0;
+   }
+   
+   @keyframes load {
+     0% { width: 0; }
+     100% { width: 78%; }
+   }
+   #Work-experience {
+     margin-top: 250px;
+   }
+   #Work-experience h1{
+     color: #307672;
+     margin-left: -550px;
+     text-decoration: none;
+   }
+   
+      .card6 {
+        width: 300px;
+        height: 300px;
+       /* margin-top: 500px;*/
+        background: url(/img/multi_logo_apple.png) no-repeat center center/cover ;
+        cursor: pointer;
+        position: relative;
+       /* top:150px;*/
+        left: 300px;
+        border-radius: 20px;
+        box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+        transition: all 150ms ease-in-out;
+      }
+      .card6:hover {
+         /* top: -3px;*/
+         /* left: -3px;*/
+        box-shadow: 3px 3px 15px 0px rgba(82, 82, 82, 0.85);
+      }
+      .card6 h3{
+        
+        text-align: center;
+        
+        margin-top: 50px;
+        color: #1a3c40;
+    }
+.card7 {
+  width: 300px;
+  height: 300px;
+ margin-top: -350px;
+ background: url(/img/pexels-photo-205961.jpeg) no-repeat center center/cover ;
+  cursor: pointer;
+  position: relative;
+ /* top:400px;*/
+ left: 700px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+  transition: all 150ms ease-in-out;
+}
+.card7:hover {
+   /* top: -3px;*/
+   /* left: -3px;*/
+  box-shadow: 3px 3px 15px 0px rgba(82, 82, 82, 0.85);
+}
+.card7 h3{
+  margin-left: 90px;
+  margin-top: 50px;
+  color: #1a3c40;
+  
+}
+   .conect-me{
+       height: 90vh;
+   }
+   .conect-me h1{
+    text-align:center;
+    margin-left: 0px;
+    margin-top:200px;
+    color: #307672;
+    /*margin-bottom: -50px;*/  
+   }
+   .card4 {
+    width: 900px;
+    height: 500px;
+    margin: 0px 10px;
+    background-color: white;
+    position: relative;
+    top:-60px;
+    left: 200px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+    transition: all 150ms ease-in-out;
+  }
+  
+
+  .textus{
+      color: #307672;
+      margin-left: 100px;
+      line-height: 40px;
+      font-size: x-large;
+  }
+  .send{
+      background: #307672;
+      border: 2px solid #307672;
+      color: white;
+      width: 50px;
+      height: 40px;
+      cursor: pointer;
+  }
+  footer{
+      border-top: 2px solid #e4eddb;
+      background-color: #1a3c40;
+      height: 30vh;
+  }
+  .footerpage h1{
+      text-decoration: none;
+      margin-top: 50px;
+      text-align: center;
+      color:#307672;
+  }
